@@ -1,0 +1,6 @@
+discord:
+  token: ""
+nats:
+  address: "nats://derek:secretpassword@demo.nats.io:4222"
+  queue: "commands"
+  subject: "commands.gateway.>"
