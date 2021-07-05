@@ -1,6 +1,12 @@
 discord:
   token: ""
+log:
+  level: 4
 nats:
   address: "nats://derek:secretpassword@demo.nats.io:4222"
   queue: "commands"
-  subject: "commands.gateway.>"
+  subject: "commands.gateway"
+redis:
+  database: 0
+  host: redis.io:6379
+  password: donald
