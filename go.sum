@@ -69,14 +69,6 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/sirupsen/logrus v1.8.1 h1:dJKuHgqk1NNQlqoA6BTlM1Wf9DOH3NBjQyu0h9+AZZE=
 github.com/sirupsen/logrus v1.8.1/go.mod h1:yWOB1SBYBC5VeMP7gHvWumXLIWorT60ONWic61uBYv0=
-github.com/streamcord/http v1.0.0 h1:VNK8OpLGySecoLU0j9noh396izh2uxTm+xYSQi7Fr5s=
-github.com/streamcord/http v1.0.0/go.mod h1:fLFLaVQbnGCwMeZY7/ss3M3mIvjc9yaDtnPOqA6hNuM=
-github.com/streamcord/http v1.0.1 h1:Fyky9nJ8jXtUZWOaTFfiZuiZzxS+jHqoSqy718y7egs=
-github.com/streamcord/http v1.0.1/go.mod h1:fLFLaVQbnGCwMeZY7/ss3M3mIvjc9yaDtnPOqA6hNuM=
-github.com/streamcord/http v1.0.2 h1:7/up7jwp7LhVcie2PKzsscoG7G1tWcj/e/YzLEdGjkU=
-github.com/streamcord/http v1.0.2/go.mod h1:fLFLaVQbnGCwMeZY7/ss3M3mIvjc9yaDtnPOqA6hNuM=
-github.com/streamcord/http v1.0.3 h1:tSsdHlVDErQAFka+0fpBagL3xtNit9H8Xb1iMEr6sR8=
-github.com/streamcord/http v1.0.3/go.mod h1:fLFLaVQbnGCwMeZY7/ss3M3mIvjc9yaDtnPOqA6hNuM=
 github.com/streamcord/http v1.0.4 h1:SJujOrTblvMLlGj7RExoOTDRbN549b/kqpV2mGHvhPg=
 github.com/streamcord/http v1.0.4/go.mod h1:fLFLaVQbnGCwMeZY7/ss3M3mIvjc9yaDtnPOqA6hNuM=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=

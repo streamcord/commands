@@ -1,4 +1,4 @@
-package types
+package objects
 
 // MessagePartialMember - Partial GuildMember object for MESSAGE_CREATE events
 type MessagePartialMember struct {

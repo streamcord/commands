@@ -1,4 +1,6 @@
 discord:
+  id: "1234567890987654321"
+  prefix: "!twitch "
   token: ""
 log:
   level: 4

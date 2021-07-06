@@ -1,7 +1,8 @@
 package events
 
 import (
-	"github.com/streamcord/commands/types"
+	"github.com/streamcord/commands/handler"
+	"github.com/streamcord/commands/types/objects"
 
 	json "github.com/json-iterator/go"
 	natslib "github.com/nats-io/nats.go"
@@ -9,7 +10,7 @@ import (
 )
 
 func HandleMessage(msg *natslib.Msg) {
-	var body types.Message
+	var body objects.Message
 	err := json.Unmarshal(msg.Data, &body)
 
 	if err != nil {
@@ -17,16 +18,7 @@ func HandleMessage(msg *natslib.Msg) {
 		_ = msg.Nak()
 	}
 
-	log.Infof("%s (%s) sent message %s to channel %s in guild %s: %s",
-		body.Author.FullUsername(),
-		body.Author.ID,
-		body.ID,
-		body.ChannelID,
-		body.GuildID,
-		body.Content)
-
-	// TODO: add the part where we parse prefix, commands and arguments
-	// TODO: add the actual command functionality
+	handler.GlobalParser.ParseMessage(body)
 	// TODO (but probably won't get around to it for a while): send error messages when we get incorrect/missing arguments, etc.
 
 	msg.Ack()

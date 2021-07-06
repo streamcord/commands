@@ -1,7 +1,9 @@
 package main
 
 import (
+	"github.com/streamcord/commands/commands"
 	"github.com/streamcord/commands/events"
+	"github.com/streamcord/commands/handler"
 	"github.com/streamcord/commands/http"
 	"github.com/streamcord/commands/internal"
 	"github.com/streamcord/commands/nats"
@@ -27,9 +29,11 @@ func main() {
 	log.Info("|___/\\__|_| \\___\\__,_|_|_|_\\__\\___/_| \\__,_|")
 	log.Info("")
 	log.Info("-------------------------")
+	log.Infof(" | Bot ID              : %s", internal.GlobalConf.Discord.ID)
 	log.Infof(" | Logging Level       : %d", internal.GlobalConf.Log.Level)
 	log.Infof(" | Nats Subject        : %s", internal.GlobalConf.Nats.Subject)
 	log.Infof(" | Nats Queue          : %s", internal.GlobalConf.Nats.Queue)
+	log.Infof(" | Prefix              : %s", internal.GlobalConf.Discord.Prefix)
 	log.Info("-------------------------")
 	log.Info("")
 
@@ -38,6 +42,12 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error when creating HTTP client: %s", err.Error())
 	}
+
+	// Create command parser and add commands
+	handler.CreateParser(internal.GlobalConf.Discord.Prefix)
+	handler.GlobalParser.AddCommand("help", commands.HelpCommand)
+	handler.GlobalParser.AddCommand("commands", commands.CommandsCommand)
+	handler.GlobalParser.AddCommand("invite", commands.InviteCommand)
 
 	// Connect to nats
 	nats.ConnectToNats(internal.GlobalConf.Nats.Address)

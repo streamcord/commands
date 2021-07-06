@@ -1,5 +1,7 @@
 package config
 
 type Discord struct {
-	Token string `json:"token"`
+	ID     string `json:"id"`
+	Prefix string `json:"prefix"`
+	Token  string `json:"token"`
 }
